@@ -1,4 +1,6 @@
 <?php
+Route::get('/testing' , ['uses'=>'TestingController@index']);
+
 Route::get ('/'		    , ['uses'=>'Auth\AuthController@getLogin'  ,   'as'=>'login'        ]);
 Route::post('/'		    , ['uses'=>'Auth\AuthController@postLogin' ,   'as'=>'login'        ]);
 Route::get ('logout'    , ['uses'=>'Auth\AuthController@getLogout' ,  'as'=>'logout'        ]);
@@ -92,5 +94,3 @@ Route::group (['middleware'=>['user']], function(){
     Route::post('/getStatusAddAgentDashboard'                       , ['uses'=>'AdminController@getStatusAddAgentDashboard',    'as' => 'home'      ]);
     Route::post('/getAgentDashboard'                                , ['uses'=>'AdminController@getAgentDashboard',    'as' => 'home'      ]);
 });
-
-

@@ -156,6 +156,7 @@ return [
         Cosapi\Providers\SocketioServiceProvider::class,
         Cosapi\Providers\VuejsServiceProvider::class,
         Cosapi\Providers\SailsioServiceProvider::class,
+        Cosapi\Providers\AdminLTEProvider::class,
 
         Collective\Html\HtmlServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,

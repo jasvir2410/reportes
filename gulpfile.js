@@ -176,6 +176,22 @@ elixir(function(mix) {
 
 
 /**
+ Generando archivos adminLTE Testing
+*/
+elixir(function(mix) {
+  mix
+  .styles([
+      'bootstrap/css/bootstrap.css',
+      'dist/css/AdminLTE.css'
+  ],'public/adminlte/css/full_adminlte.css','resources/assets/node_modules/admin-lte/')
+  .scripts([
+      'bootstrap/js/bootstrap.js',
+      'dist/js/app.js'
+  ],'public/adminlte/js/full_adminlte.js','resources/assets/node_modules/admin-lte/');
+});
+
+
+/**
  Generando un solo archivo css y js para la funcionalidad de select
 */
 elixir(function(mix) {

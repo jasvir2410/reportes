@@ -5,6 +5,7 @@
     "gulp": "^3.8.8"
   },
   "dependencies": {
+    "admin-lte": "^2.3.11",
     "babel-runtime": "^6.23.0",
     "bootstrap-sass": "^3.0.0",
     "laravel-elixir": "^5.0.0",
