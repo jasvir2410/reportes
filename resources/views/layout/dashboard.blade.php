@@ -6,7 +6,8 @@
     @include('layout.recursos.icon_title')
     <title>@yield('title')</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    {!!Html::style('css/cosapi_dashboard.min.css')!!}
+    <link rel="stylesheet" href="{{ asset('adminlte/css/full_adminlte.css')}}">
+    <link rel="stylesheet" href="{{ asset('adminlte/css/fonts-googleapis.css')}}">
      @yield('css')
   </head>
   <body>
@@ -14,6 +15,7 @@
       @yield('content')
       @include('layout.recursos.modals.modal_reconnect')
     </div>
+    <script src="{{ asset('adminlte/js/full_adminlte.js')}}"></script>
     {!!Html::script('js/cosapi_dashboard.min.js?version='.date('YmdHis'))!!}
     @yield('scripts')
   </body>

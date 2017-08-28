@@ -40,10 +40,7 @@ elixir(function(mix) {
     Generando el archivo cosapi_dashboard.min.css para el Layout AdminLTE
     */
     .styles([
-        'vendor/fortawesome/css/font-awesome.min.css',
-        'vendor/bootstrap/css/bootstrap.min.css',
         'extras/toastr/toastr.min.css',
-        'plugins/adminLTE/css/AdminLTE.min.css',
         'cosapi/css/preloader.css'
     ],'public/css/cosapi_dashboard.min.css','resources/assets/');
 });
@@ -63,15 +60,10 @@ elixir(function(mix) {
   /**
   Generando el archivo cosapi_adminlte.min.js para el Layout adminLTE
   */
-  .scripts([
-      'vendor/jquery/jquery.min.js',
-      'plugins/jQueryUI/jquery-ui.min.js'
-  ],'public/js/adminlte_jquerys.min.js','resources/assets/')
+
 
   .scripts([
-      'vendor/bootstrap/js/bootstrap.min.js',
-      'extras/bootstrap3-dialog/js/bootstrap-dialog.js',
-      'extras/toastr/toastr.js',
+      'extras/toastr/toastr.js'
   ],'public/js/adminlte_notifications.min.js','resources/assets/')
 
   .scripts([
@@ -107,8 +99,6 @@ elixir(function(mix) {
   */
   .scripts([
     'cosapi/js/env.js',
-    'vendor/jquery/jquery.min.js',
-    'vendor/bootstrap/js/bootstrap.min.js',
     'extras/toastr/toastr.js',
     'cosapi/js/helper.js',
     'node_modules/vue/vue.min.js',
@@ -176,20 +166,43 @@ elixir(function(mix) {
 
 
 /**
- Generando archivos adminLTE Testing
+jasvir 24/08/2017
+Generando archivos AdminLTE 2.4E Testing
 */
+
+
+/**
+ testing AdminLTE 2.4 Generando un solo archivo css y js para la funcionalidad de select
+*/
+
 elixir(function(mix) {
   mix
   .styles([
-      'bootstrap/css/bootstrap.css',
-      'dist/css/AdminLTE.css'
-  ],'public/adminlte/css/full_adminlte.css','resources/assets/node_modules/admin-lte/')
+      'plugins/bootstrap/dist/css/bootstrap.css',
+      'plugins/font-awesome/css/font-awesome.css',
+      'plugins/Ionicons/css/ionicons.css',
+      'dist/css/AdminLTE.css',
+      'dist/css/skins/_all-skins.css'
+  ],'public/adminlte/css/full_adminlte.css','resources/assets/vendor/adminlte/')
   .scripts([
-      'bootstrap/js/bootstrap.js',
-      'dist/js/app.js'
-  ],'public/adminlte/js/full_adminlte.js','resources/assets/node_modules/admin-lte/');
+      'plugins/jquery/dist/jquery.js',
+      'plugins/bootstrap/dist/js/bootstrap.js',
+      'plugins/fastclick/lib/fastclick.js',
+      'dist/js/adminlte.js',
+      'dist/js/demo.js'
+  ],'public/adminlte/js/full_adminlte.js','resources/assets/vendor/adminlte/');
 });
 
+elixir(function(mix) {
+  mix
+  /*css*/
+  .copy('resources/assets/vendor/adminlte/dist/img'                          , 'public/adminlte/img')
+  .copy('resources/assets/vendor/adminlte/plugins/bootstrap/dist/fonts'      , 'public/adminlte/fonts')
+  .copy('resources/assets/vendor/adminlte/plugins/Ionicons/fonts'            , 'public/adminlte/fonts')
+  .copy('resources/assets/vendor/adminlte/plugins/font-awesome/fonts'        , 'public/adminlte/fonts')
+  .copy('resources/assets/plugins/adminLTE/css/fonts-googleapis.css'         , 'public/adminlte/css/fonts-googleapis.css')
+  .copy('resources/assets/plugins/adminLTE/css/fonts-google-apis'            , 'public/adminlte/css/fonts-google-apis')
+});
 
 /**
  Generando un solo archivo css y js para la funcionalidad de select

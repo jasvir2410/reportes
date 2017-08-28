@@ -3,7 +3,7 @@
  */
 
 var AdminLTEOptions = {
-  sidebarExpandOnHover: true,
+  sidebarExpandOnHover: false,
   enableBSToppltip: true
 }
 
